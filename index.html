@@ -31,21 +31,25 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2>Installation &amp; Usage</h2>
+        <h2>
+<a name="installation--usage" class="anchor" href="#installation--usage"><span class="octicon octicon-link"></span></a>Installation &amp; Usage</h2>
 
 <p>To install, run <code>pip install d3ploy</code>.
 To use, run <code>d3ploy</code>. Additional arguments may be specified. Run <code>d3ploy --help</code> for more information.</p>
 
-<h2>Authentication</h2>
+<h2>
+<a name="authentication" class="anchor" href="#authentication"><span class="octicon octicon-link"></span></a>Authentication</h2>
 
 <p>Your AWS credentials can be set in a number of ways:</p>
 
 <ol>
 <li>In a ".boto" file in your home folder. See <a href="http://docs.pythonboto.org/en/latest/boto_config_tut.html">Boto's documentation</a> for how to create this file.</li>
+<li>In a ".aws" file in the folder you're running <code>d3ploy</code> in. Follows the same format as ".boto".</li>
 <li>In the environment variables "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY".</li>
 <li>Passed in as arguments. <code>-a</code> or <code>--access-key</code> for the Access Key ID and <code>-s</code> or <code>--access-secret</code> for the Secret Access Key.</li>
 <li>In the per-enviroment configuration outlined below.</li>
-</ol><h2>Configuration options</h2>
+</ol><h2>
+<a name="configuration-options" class="anchor" href="#configuration-options"><span class="octicon octicon-link"></span></a>Configuration options</h2>
 
 <p>When you run <code>d3ploy</code>, it will look in the current directory for a "deploy.json" file that defines the different deploy enviroments and their options. At a minimum, a "default" environment is required and is the environment used if you pass no arguments to <code>d3ploy</code>.</p>
 
@@ -59,7 +63,8 @@ To use, run <code>d3ploy</code>. Additional arguments may be specified. Run <cod
 <li>"aws_key" to specify the AWS Access Key ID to use for uploading</li>
 <li>"aws_secret" to specify the AWS Secret Access Key to use for uploading</li>
 <li>"exclude" to specify patterns to not upload</li>
-</ul><h2>OS X Notification Center</h2>
+</ul><h2>
+<a name="os-x-notification-center" class="anchor" href="#os-x-notification-center"><span class="octicon octicon-link"></span></a>OS X Notification Center</h2>
 
 <p>d3ploy will attempt to alert you via Notification Center when it is completed. To enable this feature, you need pyobjc; run <code>pip install pyobjc</code> to install.</p>
       </section>
@@ -73,7 +78,17 @@ To use, run <code>d3ploy</code>. Additional arguments may be specified. Run <cod
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3625251-12");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>

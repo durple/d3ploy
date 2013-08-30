@@ -53,7 +53,7 @@ To use, run <code>d3ploy</code>. Additional arguments may be specified. Run <cod
 
 <p>When you run <code>d3ploy</code>, it will look in the current directory for a "deploy.json" file that defines the different deploy enviroments and their options. At a minimum, a "default" environment is required and is the environment used if you pass no arguments to <code>d3ploy</code>.</p>
 
-<p>You can add as many environments as needed. Deploy to an environment by passing in its key like <code>d3ploy staging</code>.</p>
+<p>You can add as many environments as needed. Deploy to an environment by passing in its key like <code>d3ploy staging</code>. Environments besides "default" will inherit any settings not explicitly set from the default configuration.</p>
 
 <p>The only required option for any environment is "bucket" for the S3 bucket to upload to. Additionally, you may define:</p>
 
@@ -63,10 +63,16 @@ To use, run <code>d3ploy</code>. Additional arguments may be specified. Run <cod
 <li>"aws_key" to specify the AWS Access Key ID to use for uploading</li>
 <li>"aws_secret" to specify the AWS Secret Access Key to use for uploading</li>
 <li>"exclude" to specify patterns to not upload</li>
+<li>"gzip" to automatically gzip files before uploading to S3</li>
 </ul><h2>
 <a name="os-x-notification-center" class="anchor" href="#os-x-notification-center"><span class="octicon octicon-link"></span></a>OS X Notification Center</h2>
 
 <p>d3ploy will attempt to alert you via Notification Center when it is completed. To enable this feature, you need pyobjc; run <code>pip install pyobjc</code> to install.</p>
+
+<h2>
+<a name="caution-about-using-the-gzip-option" class="anchor" href="#caution-about-using-the-gzip-option"><span class="octicon octicon-link"></span></a>Caution About Using the gzip Option</h2>
+
+<p>Almost all modern browsers will support files that are served with gzip compression. The notable exception is non-smartphone mobile browsers. If you have significant traffic over those browsers, it is advisable to avoid the gzip option.</p>
       </section>
     </div>
 
